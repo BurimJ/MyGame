@@ -1,0 +1,20 @@
+.screen {
+  aspect-ratio: 16/9;
+  width: 100%;
+}
+
+#game_background {
+  background-image: url(tarzan/background.png);
+  background-size: cover;
+  z-index: 2;
+}
+
+#game_elements {
+  grid-area: 1 / 1;
+  position: relative;
+  overflow: hidden;
+}
+
+#game_ui {
+  grid-area: 1 / 1;
+}
