@@ -1,12 +1,19 @@
 .screen {
   aspect-ratio: 16/9;
   width: 100%;
+  display: grid;
+  grid-template: 100% / 100%;
 }
 
-#game_background {
-  background-image: url(tarzan/background.png);
+img {
+  width: 100%;
+}
+
+body {
+  background-image: url(Tarzan/background.avif);
   background-size: cover;
-  z-index: 2;
+  position: absolute;
+  /* overflow: hidden; */
 }
 
 #game_elements {
@@ -17,4 +24,152 @@
 
 #game_ui {
   grid-area: 1 / 1;
+}
+
+#banana_container {
+  width: 300px;
+  position: absolute;
+  top: 0;
+}
+
+#grape_container {
+  width: 300px;
+  top: 0;
+}
+
+#snake_container {
+  width: 300px;
+  top: 0;
+}
+
+.pattern1 {
+  animation-name: pattern1;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes pattern1 {
+  0% {
+    transform: translate(180%, -120%);
+  }
+  25% {
+    transform: translate(0%, 0%);
+  }
+  50% {
+    transform: translate(100%, 200%);
+  }
+  75% {
+    transform: translate(30%, 300%);
+  }
+  100% {
+    transform: translate(180%, -120%);
+  }
+}
+
+.pattern2 {
+  animation-name: pattern2;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes pattern2 {
+  0% {
+    transform: translate(300%, -200%);
+  }
+  25% {
+    transform: translate(100%, 300%);
+  }
+  50% {
+    transform: translate(100%, 50%);
+  }
+  75% {
+    transform: translate(250%, 200%);
+  }
+  100% {
+    transform: translate(300%, -200%);
+  }
+}
+
+.falling1 {
+  animation-name: falling1;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes falling1 {
+  0% {
+    transform: translate(200%, 0%);
+  }
+  100% {
+    transform: translate(100%, 700%);
+  }
+}
+
+.falling2 {
+  animation-name: falling2;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes falling2 {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  100% {
+    transform: translate(200%, 800%);
+  }
+}
+
+.falling3 {
+  animation-name: falling3;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes falling3 {
+  0% {
+    transform: translate(100%, -100%);
+  }
+  100% {
+    transform: translate(400%, 500%);
+  }
+}
+
+.pause {
+  animation-play-state: paused;
+}
+
+.zoom_out {
+  animation-name: zoom_out;
+  animation-duration: 3s;
+  animation-timing-function: end;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+@keyframes zoom_out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(0, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.zoom_in {
+  animation-name: zoom_in;
+  animation-duration: 1s;
+  animation-timing-function: end;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes zoom_in {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(10, 10);
+  }
 }
