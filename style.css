@@ -141,7 +141,7 @@ body {
 
 .zoom_out {
   animation-name: zoom_out;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-timing-function: end;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
@@ -172,4 +172,10 @@ body {
   100% {
     transform: scale(10, 10);
   }
+}
+
+.goodhit {
+}
+
+.badhit {
 }
