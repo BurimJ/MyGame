@@ -135,7 +135,7 @@ body {
   }
 }
 
-.pause {
+.paused {
   animation-play-state: paused;
 }
 
@@ -160,7 +160,7 @@ body {
 
 .zoom_in {
   animation-name: zoom_in;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-timing-function: end;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
