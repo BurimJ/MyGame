@@ -133,4 +133,14 @@ function bombGone() {
 
 if (lives <= 0) {
   console.log();
+} else {
+  levelComplete();
+}
+
+function gameOver() {
+  console.log("Game Over");
+}
+
+function levelComplete() {
+  console.log("Level Complete");
 }
