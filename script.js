@@ -72,26 +72,26 @@ function bananaGone() {
   // gør det muligt at klikke på coin igen
   document
     .querySelector("#banana_container")
-    .addEventListener("click", clickCoin);
+    .addEventListener("click", clickBanana);
 }
 
-function clickBomb() {
-  console.log("Click bomb");
+function clickSnake() {
+  console.log("Click snake");
   // Forhindr gentagne clicks
   document
     .querySelector("#bomb_container")
-    .removeEventListener("click", clickBomb);
+    .removeEventListener("click", clickSnake);
 
   // Stop coin container
-  document.querySelector("#bomb_container").classList.add("paused");
+  document.querySelector("#snake_container").classList.add("paused");
 
   // sæt forsvind-animation på coin
-  document.querySelector("#bomb_sprite").classList.add("zoom_in");
+  document.querySelector("#snake_sprite").classList.add("zoom_in");
 
   // når forsvind-animation er færdig: coinGone
   document
-    .querySelector("#bomb_container")
-    .addEventListener("animationend", bombGone);
+    .querySelector("#snake_container")
+    .addEventListener("animationend", snakeGone);
   decrementPoints();
   decrementLives();
 }
@@ -111,22 +111,26 @@ function displayDecementedLives() {
 function bombGone() {
   // fjern event der bringer os herind
   document
-    .querySelector("#bomb_container")
-    .removeEventListener("animationend", bombGone);
+    .querySelector("#snake_container")
+    .removeEventListener("animationend", snakeGone);
 
   // fjern forsvind-animation
-  document.querySelector("#bomb_sprite").classList.remove("zoom_in");
+  document.querySelector("#snake_sprite").classList.remove("zoom_in");
 
   // fjern pause
-  document.querySelector("#bomb_container").classList.remove("paused");
+  document.querySelector("#snake_container").classList.remove("paused");
 
   // genstart falling animation
-  document.querySelector("#bomb_container").classList.remove("falling");
-  document.querySelector("#bomb_container").offsetWidth;
-  document.querySelector("#bomb_container").classList.add("falling");
+  document.querySelector("#snake_container").classList.remove("falling2");
+  document.querySelector("#snake_container").offsetWidth;
+  document.querySelector("#snake_container").classList.add("falling2");
 
   // gør det muligt at klikke på coin igen
   document
-    .querySelector("#bomb_container")
-    .addEventListener("click", clickBomb);
+    .querySelector("#snake_container")
+    .addEventListener("click", clickSnake);
+}
+
+if (lives <= 0) {
+  console.log();
 }
