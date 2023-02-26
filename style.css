@@ -19,7 +19,6 @@ body {
 
 #game {
   grid-area: 1 / 1;
-
   display: grid;
   grid-template: 100% / 100%;
 }
@@ -43,7 +42,7 @@ body {
   align-content: center;
   background-image: url(Tarzan/gameover.png);
   color: #ffffff;
-  object-fit: contain;
+  background-size: contain;
 }
 
 /*.gameOverFont {
