@@ -372,6 +372,9 @@ function incrementPoints2() {
 function displayPoints() {
   console.log("show point");
   document.querySelector("#banana_count").textContent = points;
+  if (points >= 10) {
+    levelComplete();
+  }
 }
 
 function decrementLives() {
@@ -380,8 +383,9 @@ function decrementLives() {
   lives--;
   if (lives <= 0) {
     gameOver();
-  } else {
+    /* } else {
     levelComplete();
+  */
   }
 }
 
@@ -405,6 +409,6 @@ function gameOver() {
   document.querySelector("#game_over").classList.remove("hidden");
 }
 
-function levelomplete() {
+function levelComplete() {
   document.querySelector("#level_complete").classList.remove("hidden");
 }
