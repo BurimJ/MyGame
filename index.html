@@ -4,45 +4,60 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script"></script>
     <title>MyGame</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="screen">
       <div id="game">
-        <div id="game_background">
-          <div id="background_container"></div>
-        </div>
-        <div id="game_elemts">
-          <div id="banana_container">
-            <img id="banana_sprite" src="Tarzan/banana.png" />
+        <div id="game_background"></div>
+        <div id="game_elements">
+          <div id="banana1_container">
+            <img id="banana1_sprite" src="Tarzan/banana.png" alt="banana" />
           </div>
-          <div id="banana_container">
-            <img id="banana_sprite2" src="Tarzan/banana.png" />
+          <div id="banana2_container">
+            <img id="banana2_sprite" src="Tarzan/banana.png" alt="banana" />
+          </div>
+          <div id="banana3_container">
+            <img id="banana3_sprite" src="Tarzan/banana.png" alt="banana" />
           </div>
           <div id="grape_container">
-            <img id="grape_sprite" src="Tarzan/grape.png" />
+            <img id="grape_sprite" src="Tarzan/grape.png" alt="grape" />
           </div>
-          <div id="snake_container">
-            <img id="snake_sprite" src="Tarzan/snake.png" />
+          <div id="snake1_container">
+            <img id="snake1_sprite" src="Tarzan/snake.png" alt="snake" />
           </div>
-          <div id="snake_container">
-            <img id="snake_sprite2" src="Tarzan/snake.png" />
+          <div id="snake2_container">
+            <img id="snake2_sprite" src="Tarzan/snake.png" alt="snake" />
+          </div>
+          <div id="heart_container">
+            <img id="heart_sprite" src="Tarzan/heart.png" alt="heart" />
           </div>
         </div>
         <div id="game_ui">
-          <div id="score_board"></div>
-          <div id="life_board">
-            <div id="heart_container"></div>
+          <div id="score_board">
+            <span id="banana_count">0</span>
+            <img id="banana_image" src="Tarzan/banana.png" />
           </div>
-          <div id="time_board"></div>
+          <div id="life_board">
+            <img id="heart1" src="Tarzan/heart.png" class="active_heart" />
+            <img id="heart2" src="Tarzan/heart.png" class="active_heart" />
+            <img id="heart3" src="Tarzan/heart.png" class="active_heart" />
+          </div>
+          <div id="time_board">
+            <div id="time_left"></div>
+          </div>
         </div>
       </div>
 
-      <div id="start"></div>
-      <div id="game_over"></div>
-      <div id="level_complete"></div>
+      <div id="start" class="hidden"></div>
+      <div id="game_over" class="hidden">
+        <p class="gameOverFont"></p>
+      </div>
+      <div id="level_complete" class="hidden">
+        <p class="levelCompleteFont"></p>
+      </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
