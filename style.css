@@ -43,6 +43,7 @@ body {
   align-content: center;
   background-image: url(Tarzan/gameover.png);
   color: #ffffff;
+  object-fit: contain;
 }
 
 /*.gameOverFont {
