@@ -63,7 +63,8 @@ body {
   justify-content: center;
   align-content: center;
   background-image: url(Tarzan/winner.png);
-  color: #ffffff;
+  color: #170808;
+  background-size: contain;
 }
 
 .hidden,
