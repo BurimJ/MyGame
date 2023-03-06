@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyGame</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="Tarzan/banana.png" type="image/x-icon" />
   </head>
   <body>
     <div id="screen">
@@ -80,19 +81,36 @@
             <img id="heart3" src="Tarzan/heart.png" class="active_heart" />
           </div>
           <div id="time_board">
-            <div id="time_left"></div>
+            <div id="time_container">
+              <div id="time_sprite"></div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div id="start" class="hidden"></div>
+      <div id="start">
+        <h2>Jungle King</h2>
+        <p>Collect 10 points before the time runs out</p>
+        <button id="btn_start" class="pulse">Start</button>
+      </div>
       <div id="game_over" class="hidden">
-        <p class="gameOverFont"></p>
+        <h2></h2>
+        <button id="btn_return" class="pulse">Return</button>
       </div>
       <div id="level_complete" class="hidden">
-        <p class="levelCompleteFont"></p>
+        <button id="btn_retry" class="pulse">Replay</button>
+        <h2></h2>
       </div>
     </div>
+
+    <audio id="sound_collect" src="sounds/collect_points.mp3"></audio>
+    <audio id="sound_background" src="sounds/game_menu.mp3"></audio>
+    <audio id="sound_complete" src="sounds/level_complete.mp3"></audio>
+    <audio id="sound_snake" src="sounds/snake_bite.mp3"></audio>
+    <audio id="sound_over" src="sounds/game_over.mp3"></audio>
+    <audio id="sound_success" src="sounds/short_success.mp3"></audio>
+    <audio id="sound_heart" src="sounds/heart_points.mp3"></audio>
+
     <script src="script.js"></script>
   </body>
 </html>
