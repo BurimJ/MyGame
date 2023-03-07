@@ -100,6 +100,12 @@ function startGame() {
   document
     .querySelector("#grape_container")
     .addEventListener("animationiteration", pRestart);
+  document
+    .querySelector("#snake1_container")
+    .addEventListener("animationiteration", pRestart);
+  document
+    .querySelector("#snake2_container")
+    .addEventListener("animationiteration", pRestart);
 }
 
 function startAllAnimations() {
@@ -394,6 +400,8 @@ function snake1Gone() {
   document.querySelector("#snake1_container").offsetWidth;
   document.querySelector("#snake1_container").classList.add("falling");
 
+  pRestart.call(this);
+
   // gør det muligt at klikke på bomb igen
   document
     .querySelector("#snake1_container")
@@ -416,6 +424,8 @@ function snake2Gone() {
   document.querySelector("#snake2_container").classList.remove("falling");
   document.querySelector("#snake2_container").offsetWidth;
   document.querySelector("#snake2_container").classList.add("falling");
+
+  pRestart.call(this);
 
   // gør det muligt at klikke på bomb igen
   document
@@ -464,6 +474,8 @@ function heartGone() {
   document.querySelector("#heart_container").classList.remove("falling");
   document.querySelector("#heart_container").offsetWidth;
   document.querySelector("#heart_container").classList.add("falling");
+
+  pRestart.call(this);
 
   // gør det muligt at klikke på heart igen
   document
@@ -598,4 +610,6 @@ function stopGame() {
   document
     .querySelector("#heart_container")
     .removeEventListener("click", clickHeart);
+
+  document.querySelector("#time_sprite").classList.remove("shrink");
 }
